@@ -32,6 +32,10 @@ try {
   console.log(err);
 }
 
+app.get("/", (req, res) => {
+  res.sendFile(path.resolve("./index.html"));
+});
+
 // Viewing the Users
 app.get("/users", (req, res) => {
   res.send(users);
